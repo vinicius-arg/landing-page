@@ -3,6 +3,14 @@
     padding: 0;
 }
 
+.text {
+    margin-bottom: 10px;
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
 .header {
     display: flex;
     background-color: blue;
@@ -22,10 +30,27 @@
 }
 
 .banner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     background-color: red;
     height: 400px;
 }
 
 .banner-text {
-    
+    width: 35%;
+    margin: 10px;
+}
+
+.btn {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: 0px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+article[class="banner"] {
+    background-color: beige;
 }
