@@ -226,17 +226,17 @@ nav > ul > li > a {
     margin: 5px;
 }
 
-.left-img > #img-1 {
+.left-img > .img-1 {
     position: relative;
     bottom: 30px;
 }
 
-.left-img > #img-2 {
+.left-img > .img-2 {
     position: relative;
     top: 30px;
 }
 
-.left-img > #img-3 {
+.left-img > .img-3 {
     position: relative;
     right: 70px;
     width: 180px;
@@ -252,14 +252,14 @@ nav > ul > li > a {
     border-radius: 50%;
 }
 
-.bottom-img > #img-4 {
+.bottom-img > .img-4 {
     width: 300px;
     position: relative;
     left: 40px;
     top: 40px;
 }
 
-.bottom-img > #img-5 {
+.bottom-img > .img-5 {
     width: 170px;
     position: relative;
     right: 50px;
@@ -274,8 +274,8 @@ nav > ul > li > a {
 }
 
 .card {
-    width: 20vw;
-    height: 20vw;
+    width: 17vw;
+    height: 17vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -283,6 +283,33 @@ nav > ul > li > a {
     text-align: center;
     background-color: orange;
     border-radius: 5px;
+    padding: 20px;
+}
+
+.card > img {
+    width: 60%;
+}
+
+.card-link {
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+}
+
+.card-link::after {
+    content: '';
+    width: 15px;
+    height: 10px;
+    display: inline-block;
+    background: url(../assets/images/icons/arrow.png); /*flaticon.com image*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 300ms;
+}
+
+.card-link:hover::after {
+    transform: translateX(4px);
 }
 
 .reviews {
