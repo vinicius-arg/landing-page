@@ -286,14 +286,34 @@ nav > ul > li > a {
     padding: 20px;
 }
 
+.card > .title {
+    width: 80%; 
+}
+
 .card > img {
-    width: 60%;
+    width: 55%;
 }
 
 .card-link {
     text-decoration: none;
     font-weight: 600;
     color: black;
+}
+
+.card-link::before {
+    content: '';
+    width: 0%;
+    height: 1px;
+    background-color: black;
+    display: block;
+    transform: translateY(22px);
+    transition: ease-out 300ms;
+    visibility: hidden;
+}
+
+.card-link:hover::before {
+    width: calc(100% + 4px);
+    visibility: visible;
 }
 
 .card-link::after {
