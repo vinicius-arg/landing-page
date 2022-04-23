@@ -187,12 +187,37 @@
         const text = document.getElementsByClassName("review-text")[0];
         const name = document.getElementsByClassName("reviewer-name")[0];
 
+        let index = 0; // Index do card;
+
         let star = [];
         for (let i = 0; i <= 4; i++) {
             star[i] = document.getElementsByClassName("star")[i];
         }
 
-        console.log(star)
+        forward.addEventListener("click", function () {
+            index++;
+            if (index == 0) {
+                photo.setAttribute("src", "./assets/images/photos/reviewers/img-2.jpg");
+                text.innerHTML = '"Alterar o seu visual representa uma pequena mudança, mas se usar um destes óculos, eu diria que a mudança será das grandes."';
+                name.innerHTML = "Mia C.";
+                star[4].setAttribute("class", "star");
+            }
+
+            if (index == 1) {
+                photo.setAttribute("src", "./assets/images/photos/reviewers/img-4.jpg");
+                text.innerHTML = '"Nunca vi algo como isso, todo cuidado e tecnologia envolvida no processo de confecção destes óculos realmente explica o resultado final fantástico."';
+                name.innerHTML = "Miles K.";
+                star[4].setAttribute("class", "star");
+            }
+
+            if (index == 2) {
+                photo.setAttribute("src", "./assets/images/photos/reviewers/img-8.jpg");
+                text.innerHTML = '"O encaixe perfeito do óculos e as facilidades da compra realmente me supreenderam, recomendado para quem quer praticidade e bom resultado."';
+                name.innerHTML = "Jaryl P.";
+                star[4].setAttribute("class", "star-e");
+                index = -1;
+            }
+        })
         
     </script>
 

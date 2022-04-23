@@ -401,22 +401,24 @@ nav > ul > li > a {
 
 .review-card {
     background-color: white;
-    width: calc(100% - 50px);
+    width: 100%;
     height: 300px;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: ease-in 300ms;
 }
 
 .review-card > span {
-    width: 120px;
-    height: 100px;
+    width: 100px;
+    height: 100%;
     margin: 10px;
-    background-size: 60%;
+    background-size: 30px;
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
+    transition: all 300ms;
 }
 
 .back {
@@ -467,6 +469,7 @@ nav > ul > li > a {
 }
 
 .review-content {
+    width: 80%;
     text-align: justify;
     font-size: 25px;
     padding: 50px;
