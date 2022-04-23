@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
     <title>Landing Page</title>
 </head>
 <body>
@@ -150,24 +151,50 @@
     </section>
 
     <section class="reviews">
-        <h2>Lorem ipusm dolor sit amet</h2>
-        <h3>Lorem ipsum</h3>
+        <div class="reviews-header">
+            <h2>Reviews de clientes verificados</h2>
+            <h3>Costumer lookbook</h3>
+        </div>
+
         <article class="review-card">
-
-            <div class="decoration-line"></div>
-
-            <img class="reviwer-photo" src="./assets/images/photos/reviewers/img-2.jpg">
-
+            <span class="back"></span>
+            <div class="photo-general">
+                <img class="reviewer-photo" src="./assets/images/photos/reviewers/img-2.jpg">
+                <div class="decoration-line"></div>
+            </div>
             <div class="review-content">
-                <div class="stars"></div>
+                <!-- Star container -->
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <!-- Fim star container -->
                 <blockquote class="review-text">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea optio odio incidunt unde nisi sed harum, consequatur officiis cumque iure! Laudantium ea labore nobis magnam obcaecati deserunt rem minima blanditiis.
+                    "Alterar o seu visual representa uma pequena mudança, mas se usar um destes óculos, eu diria que a mudança será das grandes."
                 </blockquote>
                 <p class="reviewer-name">Mia C.</p>
             </div>
-
+            <span class="forward"></span>
         </article>
+
     </section>
+
+    <script>
+        const back = document.getElementsByClassName("back")[0];
+        const forward = document.getElementsByClassName("forward")[0];
+        const photo = document.getElementsByClassName("reviewer-photo")[0];
+        const text = document.getElementsByClassName("review-text")[0];
+        const name = document.getElementsByClassName("reviewer-name")[0];
+
+        let star = [];
+        for (let i = 0; i <= 4; i++) {
+            star[i] = document.getElementsByClassName("star")[i];
+        }
+
+        console.log(star)
+        
+    </script>
 
     <footer>
         <article class="footer-top">
