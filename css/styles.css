@@ -8,8 +8,8 @@ body {
     scroll-behavior: smooth;
 }
 
-img {
-    pointer-events: none;
+span {
+    display: inline-block;
 }
 
 ::-webkit-scrollbar {
@@ -180,8 +180,28 @@ nav > ul > li > a {
     margin-bottom: 10px;
 }
 
-.circle > img {
-    width: 50%;
+.circle > span {
+    background-size: 50%;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.c-card-1 { 
+    background: url(../assets/images/icons/face-r.png);
+}
+
+.c-card-2 {
+    background: url(../assets/images/icons/craft.png);
+}
+
+.c-card-3 {
+    background: url(../assets/images/icons/glasses.png);
+}
+
+.c-card-4 {
+    background: url(../assets/images/icons/star.png);
 }
 
 .spec-banner {
@@ -221,38 +241,46 @@ nav > ul > li > a {
     justify-content: center;
 }
 
-.left-img > img {
+.left-img > span {
+    background-size: cover;
     height: 500px;
+    width: 150px;
     margin: 5px;
 }
 
 .left-img > .img-1 {
+    background: url(../assets/images/photos/img-3.jpg);
+    background-size: cover;
     position: relative;
     bottom: 30px;
 }
 
 .left-img > .img-2 {
+    background: url(../assets/images/photos/img-10.jpg);
+    background-size: cover;
     position: relative;
     top: 30px;
 }
 
 .left-img > .img-3 {
+    background: url(../assets/images/photos/img-5.jpg);
+    background-size: cover;
     position: relative;
-    right: 70px;
+    height: 180px;
     width: 180px;
+    right: 70px;
     top: 140px;
-}
-
-.left-img > img:nth-child(3) {
     border-radius: 50%;
-    height: auto;
 }
 
-.bottom-img > img {
+.bottom-img > span {
     border-radius: 50%;
 }
 
 .bottom-img > .img-4 {
+    background: url(../assets/images/photos/img-7.jpg);
+    background-size: cover;
+    height: 300px;
     width: 300px;
     position: relative;
     left: 40px;
@@ -260,6 +288,9 @@ nav > ul > li > a {
 }
 
 .bottom-img > .img-5 {
+    background: url(../assets/images/photos/img-9.jpg);
+    background-size: cover;
+    height: 170px;
     width: 170px;
     position: relative;
     right: 50px;
@@ -290,8 +321,24 @@ nav > ul > li > a {
     width: 80%; 
 }
 
-.card > img {
-    width: 55%;
+.card > span {
+    width: 100%;
+    height: 100%;
+    background-size: 55%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.sq-card-1 {
+    background: url(../assets/images/icons/location.png);
+}
+
+.sq-card-2 {
+    background: url(../assets/images/icons/black-glasses.png);    
+}
+
+.sq-card-3 {
+    background: url(../assets/images/icons/lents.png);    
 }
 
 .card-link {
@@ -357,6 +404,32 @@ nav > ul > li > a {
     height: 100%;
     background-color: orange;
     position: relative;
+}
+
+.decoration-line::before {
+    content: '';
+    width: 60px;
+    height: 60px;
+    background: url(../assets/images/icons/back.png);
+    display: inline-block;
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.reviwer-photo {
+    width: 200px;
+}
+
+.review-content::after {
+    content: '';
+    width: 60px;
+    height: 60px;
+    background: url(../assets/images/icons/forward.png);
+    display: inline-block;
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 footer {
