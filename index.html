@@ -156,70 +156,87 @@
             <h3>Costumer lookbook</h3>
         </div>
 
+        <!-- Reviews card -->
         <article class="review-card">
+            <!-- Seta para trás -->
             <span class="back"></span>
-            <div class="photo-general">
-                <img class="reviewer-photo" src="./assets/images/photos/reviewers/img-2.jpg">
-                <div class="decoration-line"></div>
-            </div>
-            <div class="review-content">
-                <!-- Star container -->
-                <span class="star"></span>
-                <span class="star"></span>
-                <span class="star"></span>
-                <span class="star"></span>
-                <span class="star"></span>
-                <!-- Fim star container -->
-                <blockquote class="review-text">
-                    "Alterar o seu visual representa uma pequena mudança, mas se usar um destes óculos, eu diria que a mudança será das grandes."
-                </blockquote>
-                <p class="reviewer-name">Mia C.</p>
-            </div>
+                <!-- Início carousel-->
+                <div class="carousel">
+
+                    <!-- Card 1 -->
+                    <div class="internal-structure">
+                        <div class="photo-general">
+                            <img class="reviewer-photo" src="./assets/images/photos/reviewers/img-2.jpg">
+                            <div class="decoration-line"></div>
+                        </div>
+                    
+                        <div class="review-content">
+                            <!-- Star container -->
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <!-- Fim star container -->
+                            <blockquote class="review-text">
+                                "Alterar o seu visual representa uma pequena mudança, mas se usar um destes óculos, eu diria que a mudança será das grandes."
+                            </blockquote>
+                            <p class="reviewer-name">Mia C.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="internal-structure">
+                        <div class="photo-general">
+                            <img class="reviewer-photo" src="./assets/images/photos/reviewers/img-4.jpg">
+                            <div class="decoration-line"></div>
+                        </div>
+                    
+                        <div class="review-content">
+                            <!-- Star container -->
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <!-- Fim star container -->
+                            <blockquote class="review-text">
+                                "Nunca vi algo assim, todo cuidado e tecnologia envolvidos no processo de confecção destes óculos explica o resultado final fantástico."
+                            </blockquote>
+                            <p class="reviewer-name">Miles J.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="internal-structure">
+                        <div class="photo-general">
+                            <img class="reviewer-photo" src="./assets/images/photos/reviewers/img-8.jpg">
+                            <div class="decoration-line"></div>
+                        </div>
+                    
+                        <div class="review-content">
+                            <!-- Star container -->
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star-e"></span>
+                            <!-- Fim star container -->
+                            <blockquote class="review-text">
+                                "O encaixe perfeito do óculos e as facilidades da compra realmente me supreenderam, recomendado para quem quer praticidade e bom resultado."
+                            </blockquote>
+                            <p class="reviewer-name">Jaryl S.</p>
+                        </div>
+                    </div>
+                    <!-- Fim cards -->
+                </div>
+                <!-- Fim carousel-->
+
+            <!-- Seta para frente -->
             <span class="forward"></span>
         </article>
-
+        <!-- Fim reviews card -->
     </section>
-
-    <script>
-        const back = document.getElementsByClassName("back")[0];
-        const forward = document.getElementsByClassName("forward")[0];
-        const photo = document.getElementsByClassName("reviewer-photo")[0];
-        const text = document.getElementsByClassName("review-text")[0];
-        const name = document.getElementsByClassName("reviewer-name")[0];
-
-        let index = 0; // Index do card;
-
-        let star = [];
-        for (let i = 0; i <= 4; i++) {
-            star[i] = document.getElementsByClassName("star")[i];
-        }
-
-        forward.addEventListener("click", function () {
-            index++;
-            if (index == 0) {
-                photo.setAttribute("src", "./assets/images/photos/reviewers/img-2.jpg");
-                text.innerHTML = '"Alterar o seu visual representa uma pequena mudança, mas se usar um destes óculos, eu diria que a mudança será das grandes."';
-                name.innerHTML = "Mia C.";
-                star[4].setAttribute("class", "star");
-            }
-
-            if (index == 1) {
-                photo.setAttribute("src", "./assets/images/photos/reviewers/img-4.jpg");
-                text.innerHTML = '"Nunca vi algo como isso, todo cuidado e tecnologia envolvida no processo de confecção destes óculos realmente explica o resultado final fantástico."';
-                name.innerHTML = "Miles K.";
-                star[4].setAttribute("class", "star");
-            }
-
-            if (index == 2) {
-                photo.setAttribute("src", "./assets/images/photos/reviewers/img-8.jpg");
-                text.innerHTML = '"O encaixe perfeito do óculos e as facilidades da compra realmente me supreenderam, recomendado para quem quer praticidade e bom resultado."';
-                name.innerHTML = "Jaryl P.";
-                star[4].setAttribute("class", "star-e");
-                index = -1;
-            }
-        })
-        
-    </script>
 
     <footer>
         <article class="footer-top">
@@ -278,5 +295,6 @@
             </div>
         </article>
     </footer>
+    <script src="./scripts/script.js"></script>
 </body>
 </html>

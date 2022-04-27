@@ -402,12 +402,11 @@ nav > ul > li > a {
 .review-card {
     background-color: white;
     width: 100%;
-    height: 300px;
+    height: 350px;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: ease-in 300ms;
 }
 
 .review-card > span {
@@ -427,6 +426,22 @@ nav > ul > li > a {
 
 .forward {
     background: url(../assets/images/icons/forward.png);
+}
+
+.carousel {
+    display: flex;
+    width: calc(100% - 200px);
+    overflow-x: hidden;
+}
+
+.internal-structure {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 500ms;
 }
 
 .photo-general {
