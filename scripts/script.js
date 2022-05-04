@@ -33,3 +33,9 @@ forward.addEventListener("click", function () {
     b.style.transform = "translateX(" + n + "%)";
     c.style.transform = "translateX(" + n + "%)";
 });
+
+const loading = document.getElementsByClassName("loading-overlay")[0];
+onload = () => {
+    loading.style.display = "none";
+    document.body.style.overflow = "auto";
+}
