@@ -97,6 +97,11 @@ span {
     justify-content: space-between;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+}
+
 .logo > img {
     width: 210px;
 }
@@ -106,12 +111,11 @@ span {
     display: inline-block;
     width: 35px;
     height: 35px;
+    margin: 0 5px;
     background: url(../assets/images/icons/logo/b-sun.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    position: relative;
-    bottom: 10px;
 }
 
 nav > ul {
@@ -685,4 +689,70 @@ small > a {
 
 small > a:hover {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 480px){
+    .loading {
+        width: 10px;
+        height: 10px;
+        margin: 5px;
+    }
+
+    .header {
+        padding: 0;
+    }
+
+    .menu {
+        width: 30px;
+        height: 30px;
+        margin-left: auto;
+        margin: 10px 20px;
+    }
+
+    .menu > span {
+        width: 30px;
+        height: 3px;
+        background-color: black;
+        display: block;
+        margin: 5px;
+        border-radius: 5px;
+    }
+
+    .logo {
+        margin: 10px;
+    }
+
+    .logo > img {
+        width: 120px;
+    }
+
+    .logo::before {
+        width: 20px;
+        height: 20px;
+    }
+
+    nav {
+        height: 100vh;
+        background-color: #ffffff;
+        padding: 10px;
+        display: none;
+    }
+
+    nav > ul > li > a {
+        font-size: 15px;
+    } 
+
+    .nav-item {
+        margin: 2px 0;
+        float: none;
+        width: 50vw;
+    }
+}
+
+@media screen and (max-width: 768px){
+    
+}
+
+@media screen and (max-width: 1024px){
+    
 }
