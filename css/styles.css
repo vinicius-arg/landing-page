@@ -129,15 +129,10 @@ nav > ul > li > a {
     font-size: 13px;
     color: black;
     font-weight: 600;
+    display: inline-block;
 }
 
-.nav-item {
-    margin: 10px;
-    color: aliceblue;
-    float: left;
-}
-
-.nav-item::before {
+nav > ul > li > a::before {
     content: '';
     width: 0%;
     height: 1px;
@@ -148,9 +143,15 @@ nav > ul > li > a {
     visibility: hidden;
 }
 
-.nav-item:hover::before {
+nav > ul > li > a:hover::before {
     width: 100%;
     visibility: visible;
+}
+
+.nav-item {
+    margin: 10px;
+    color: aliceblue;
+    float: left;
 }
 
 .banner {
@@ -692,13 +693,32 @@ small > a:hover {
     text-decoration: underline;
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1060px){
     .left-img > .img-3 {
         display: none;
     }
+
+    .cards-container {
+        height: 38vw;
+    }
+
+    .card {
+        width: 25vw;
+        height: 25vw;
+    }
+
+    .review-content {
+        font-size: 17px;
+        text-align: initial;
+    }
+
+    .review-content > span {
+        width: 25px;
+        height: 25px;
+    }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 880px){
     .loading {
         width: 10px;
         height: 10px;
@@ -720,6 +740,8 @@ small > a:hover {
     .menu {
         margin-left: auto;
         margin: 10px 15px;
+        z-index: 2;
+        cursor: pointer;
     }
 
     .menu > span {
@@ -746,19 +768,25 @@ small > a:hover {
 
     nav {
         height: 100vh;
-        background-color: #ffffff;
+        width: 200px;
+        background-color: #ffffff50;
+        backdrop-filter: blur(10px);
         padding: 10px;
-        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        /* transition: 200ms ease-out; */
+        /* transform: translateX(100%); */
     }
-
+    
+    .nav-item {
+        margin: 5px 0;
+        float: none;
+    }
+    
     nav > ul > li > a {
         font-size: 15px;
-    } 
-
-    .nav-item {
-        margin: 2px 0;
-        float: none;
-        width: 50vw;
     }
 
     .banner {
@@ -816,8 +844,159 @@ small > a:hover {
     }
 
     .review-content {
-        font-size: 19px;
+        font-size: 15px;
         text-align: initial;
+    }
+
+    .review-content > span {
+        width: 20px;
+        height: 20px;
+    }
+
+    .address {
+        margin: 5px;
+    }
+
+    .additional,
+    .address-container,
+    .link-list {
+        padding: 0;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .footer-top,
+    .additional,
+    .address-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .address-container {
+        margin: 20px 0;
+    }
+
+    .address {
+        margin: 5px;
+    }
+
+    .additional {
+        height: auto;
+    }
+
+    .links {
+        width: 90%;
+    }
+
+    .link-list {
+        display: block;
+        margin: auto;
+    }
+
+    .link-list > a {
+        display: block;
+        background-color: #e2e2e2;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .footer-bottom {
+        font-size: 10px;
+    }
+    
+    small {
+        margin: 10px;
+    }
+
+    small > a {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .left-img {
+        width: 200px;
+    }
+
+    .left-img > .img-1,
+    .left-img > .img-2 {
+        background-position: -30px;
+    }
+
+    .right-side {
+        width: 250px;
+    }
+
+    .bottom-img > .img-4,
+    .bottom-img > .img-5 {
+        width: 120px;
+        height: 120px;
+    }
+
+    .cards-container {
+        height: auto;
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    .card {
+        width: 80%;
+        height: 100px;
+        margin: 5px;
+    }
+
+    .card > span {
+        width: 15%;
+        background-size: contain;
+    }
+
+    .review-card {
+        height: 300px;
+    }
+
+    .review-card > span {
+        width: 20px;
+        background-size: 10px;
+    }
+
+    .carousel {
+        width: 90%;
+    }
+
+    .decoration-line {
+        display: none;
+    }
+
+    .internal-structure {
+        flex-direction: column;
+    }
+
+    .reviewer-photo {
+        width: 120px;
+        position: static;
+        transform: none;
+    }
+
+    .photo-general {
+        position: static;
+        margin: 10px auto;
+        height: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .review-content {
+        font-size: 11px;
+        padding: 20px;
+        padding-top: 0;
+        text-align: center;
+    }
+
+    .review-content > span {
+        width: 15px;
+        height: 15px;
     }
 }
 
@@ -872,114 +1051,11 @@ small > a:hover {
         background-position: 0 -30px;
     }
 
-    .cards-container {
-        height: auto;
-        flex-direction: column;
-        margin: 10px 0;
-    }
-
-    .card {
-        width: 80%;
-        height: 100px;
-        margin: 5px;
-    }
-
-    .card > span {
-        width: 15%;
-        background-size: contain;
-    }
-
     .reviews {
         padding: 20px;
     }
 
     .reviews-header > h3 {
         font-size: 30px;
-    }
-
-    .review-card {
-        height: 300px;
-    }
-
-    .review-card > span {
-        width: 20px;
-        background-size: 10px;
-    }
-
-    .carousel {
-        width: 90%;
-    }
-
-    .decoration-line {
-        display: none;
-    }
-
-    .internal-structure {
-        flex-direction: column;
-    }
-
-    .reviewer-photo {
-        width: 120px;
-        position: static;
-        transform: none;
-    }
-
-    .photo-general {
-        position: static;
-        margin: 10px auto;
-        height: auto;
-        display: flex;
-        align-items: center;
-    }
-
-    .review-content {
-        font-size: 12px;
-        padding: 20px;
-        padding-top: 0;
-        text-align: center;
-    }
-
-    .review-content > span {
-        width: 20px;
-        height: 20px;
-    }
-
-    .footer-top,
-    .additional,
-    .address-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .address-container {
-        margin: 20px 0;
-    }
-
-    .additional {
-        height: auto;
-    }
-
-    .link-list {
-        display: block;
-    }
-
-    .link-list > a {
-        display: block;
-        background-color: #e2e2e2;
-        padding: 5px;
-        border-radius: 5px;
-    }
-
-    .footer-bottom {
-        font-size: 10px;
-    }
-    
-    small {
-        margin: 10px;
-    }
-
-    small > a {
-        display: block;
-        text-align: center;
     }
 }
