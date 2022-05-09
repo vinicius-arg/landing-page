@@ -44,14 +44,19 @@ onload = () => {
 
 // Menu display
 
+function hideNavbar () {
+    if (window.innerWidth <= 880) {
+        nav.style.display = "none";
+        console.log("navbar <- display: none")
+    }
+}
+
 const menu = document.getElementsByClassName("menu")[0];
 const nav = document.getElementsByTagName("nav")[0];
 
-if (window.innerWidth <= 880) {
-    nav.style.display = "none";
-}
-
-
+// Para captar mudanças no width;
+hideNavbar();
+onresize = hideNavbar;
 
 menu.addEventListener("click", () => {
     if (nav.style.display == "none") {
