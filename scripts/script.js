@@ -1,38 +1,40 @@
-// Rascunho;
-let a = document.getElementsByClassName("internal-structure")[0];
-let b = document.getElementsByClassName("internal-structure")[1];
-let c = document.getElementsByClassName("internal-structure")[2];
+// Efeito carousel
+
+const cardSt = document.getElementsByClassName("internal-structure")[0];
+const cardNd = document.getElementsByClassName("internal-structure")[1];
+const cardRd = document.getElementsByClassName("internal-structure")[2];
 const back = document.querySelector(".back");
 const forward = document.querySelector(".forward");
 
-let n = 0;
+let xPercent = 0;
 
 back.addEventListener("click", function () {
-    if (n == 0) {
-        n = -200
-    } else if (n == -100) {
-        n+=100;
-    } else if (n == -200) {
-        n+=100;
+    if (xPercent == 0) {
+        xPercent = -200
+    } else if (xPercent == -100) {
+        xPercent+=100;
+    } else if (xPercent == -200) {
+        xPercent+=100;
     }
-    a.style.transform = "translateX(" + n + "%)";
-    b.style.transform = "translateX(" + n + "%)";
-    c.style.transform = "translateX(" + n + "%)";
+    cardSt.style.transform = "translateX(" + n + "%)";
+    cardNd.style.transform = "translateX(" + n + "%)";
+    cardRd.style.transform = "translateX(" + n + "%)";
 });
 
 forward.addEventListener("click", function () {
-    if (n == 0) {
-        n-=100;
-    } else if (n == -100) {
-        n-=100;
-    } else if (n == -200) {
-        n = 0;
+    if (xPercent == 0) {
+        xPercent-=100;
+    } else if (xPercent == -100) {
+        xPercent-=100;
+    } else if (xPercent == -200) {
+        xPercent = 0;
     }
-    console.log(n)
-    a.style.transform = "translateX(" + n + "%)";
-    b.style.transform = "translateX(" + n + "%)";
-    c.style.transform = "translateX(" + n + "%)";
+    cardSt.style.transform = "translateX(" + xPercent + "%)";
+    cardNd.style.transform = "translateX(" + xPercent + "%)";
+    cardRd.style.transform = "translateX(" + xPercent + "%)";
 });
+
+// Loading
 
 const loading = document.getElementsByClassName("loading-overlay")[0];
 onload = () => {
@@ -40,7 +42,7 @@ onload = () => {
     document.body.style.overflow = "auto";
 }
 
-// Menu animation
+// Menu display
 
 const menu = document.getElementsByClassName("menu")[0];
 const nav = document.getElementsByTagName("nav")[0];
