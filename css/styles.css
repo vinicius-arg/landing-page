@@ -615,7 +615,7 @@ nav > ul > li > a {
 }
 
 .additional {
-    background-color: azure;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -664,7 +664,7 @@ nav > ul > li > a {
 }
 
 .link-list > a {
-    margin: 3px 10px;
+    margin: 5px 10px;
     text-decoration: none;
     color: inherit;
 }
@@ -776,7 +776,7 @@ small > a:hover {
         width: 50%;
     }
 
-    .line {
+    .spec-top > .line {
         display: none;
     }
 
@@ -797,7 +797,7 @@ small > a:hover {
 
     .spec-banner {
         height: 450px;
-        padding: 0 20px;
+        padding: 0 20px 30px;
     }
 
     .left-img {
@@ -829,6 +829,7 @@ small > a:hover {
     .cards-container {
         height: auto;
         flex-direction: column;
+        margin: 10px 0;
     }
 
     .card {
@@ -897,8 +898,38 @@ small > a:hover {
         height: 20px;
     }
 
-    footer {
-        display: none;
+    .footer-top,
+    .additional,
+    .address-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .address-container {
+        margin: 20px 0;
+    }
+
+    .additional {
+        height: auto;
+    }
+
+    .link-list {
+        display: block;
+    }
+
+    .link-list > a {
+        display: block;
+        background-color: #e2e2e2;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .footer-bottom {
+        font-size: 10px;
+    }
+    
+    small {
+        margin: 10px;
     }
 }
 
