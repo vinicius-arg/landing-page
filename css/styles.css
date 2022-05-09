@@ -842,6 +842,61 @@ small > a:hover {
         background-size: contain;
     }
 
+    .reviews {
+        padding: 20px;
+    }
+
+    .reviews-header > h3 {
+        font-size: 30px;
+    }
+
+    .review-card {
+        height: 300px;
+    }
+
+    .review-card > span {
+        width: 20px;
+        background-size: 10px;
+    }
+
+    .carousel {
+        width: 90%;
+    }
+
+    .decoration-line {
+        display: none;
+    }
+
+    .internal-structure {
+        flex-direction: column;
+    }
+
+    .reviewer-photo {
+        width: 120px;
+        position: static;
+        transform: none;
+    }
+
+    .photo-general {
+        position: static;
+        margin: 10px auto;
+        height: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .review-content {
+        font-size: 11px;
+        padding: 20px;
+        padding-top: 0;
+        text-align: center;
+    }
+
+    .review-content > span {
+        width: 20px;
+        height: 20px;
+    }
+
     footer {
         display: none;
     }
