@@ -89,7 +89,7 @@ span {
     font-size: 40px;
 }
 
-.header {
+header {
     display: flex;
     background-color: orange;
     padding: 10px;
@@ -184,6 +184,7 @@ nav > ul > li > a {
     cursor: pointer;
     margin: 0px 3px 3px 0px;
     transition: ease-in-out 200ms;
+    box-sizing: border-box;
 }
 
 .btn:hover {
@@ -698,24 +699,30 @@ small > a:hover {
         margin: 5px;
     }
 
-    .header {
+    header {
         padding: 0;
     }
 
+    .title {
+        font-size: 15px;
+    }
+
+    .text {
+        font-size: 25px;
+    }
+
     .menu {
-        width: 30px;
-        height: 30px;
         margin-left: auto;
-        margin: 10px 20px;
+        margin: 10px 15px;
     }
 
     .menu > span {
-        width: 30px;
+        width: 20px;
         height: 3px;
         background-color: black;
         display: block;
-        margin: 5px;
-        border-radius: 5px;
+        margin: 4px;
+        border-radius: 10px;
     }
 
     .logo {
@@ -723,7 +730,7 @@ small > a:hover {
     }
 
     .logo > img {
-        width: 120px;
+        width: 130px;
     }
 
     .logo::before {
@@ -746,6 +753,46 @@ small > a:hover {
         margin: 2px 0;
         float: none;
         width: 50vw;
+    }
+
+    .banner {
+        background-position: -180px;
+    }
+    
+    .banner-text {
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(10px);
+        margin: 0;
+        text-align: center;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn {
+        width: 50%;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .topics {
+        flex-direction: column;
+        align-items: center;
+    } 
+    
+    .topic-container {
+        width: 70%;
+        
+    }
+
+    .circle {
+        width: 30vw;
+        height: 30vw;
     }
 }
 
