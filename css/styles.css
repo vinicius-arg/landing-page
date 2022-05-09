@@ -825,6 +825,26 @@ small > a:hover {
         margin: 5px auto;
         background-position: 0 -30px;
     }
+
+    .cards-container {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .card {
+        width: 80%;
+        height: 100px;
+        margin: 5px;
+    }
+
+    .card > span {
+        width: 15%;
+        background-size: contain;
+    }
+
+    footer {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 768px){
