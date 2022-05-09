@@ -692,6 +692,135 @@ small > a:hover {
     text-decoration: underline;
 }
 
+@media screen and (max-width: 1024px){
+    .left-img > .img-3 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .loading {
+        width: 10px;
+        height: 10px;
+        margin: 5px;
+    }
+
+    header {
+        padding: 0;
+    }
+
+    .title {
+        font-size: 15px;
+    }
+
+    .text {
+        font-size: 25px;
+    }
+
+    .menu {
+        margin-left: auto;
+        margin: 10px 15px;
+    }
+
+    .menu > span {
+        width: 20px;
+        height: 3px;
+        background-color: black;
+        display: block;
+        margin: 4px;
+        border-radius: 10px;
+    }
+
+    .logo {
+        margin: 10px;
+    }
+
+    .logo > img {
+        width: 130px;
+    }
+
+    .logo::before {
+        width: 20px;
+        height: 20px;
+    }
+
+    nav {
+        height: 100vh;
+        background-color: #ffffff;
+        padding: 10px;
+        display: none;
+    }
+
+    nav > ul > li > a {
+        font-size: 15px;
+    } 
+
+    .nav-item {
+        margin: 2px 0;
+        float: none;
+        width: 50vw;
+    }
+
+    .banner {
+        background-position: 50%;
+    }
+    
+    .banner > .banner-text {
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(10px);
+        margin: 0;
+        text-align: center;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn {
+        width: 50%;
+    }
+
+    .right-side {
+        justify-content: center;
+    }
+
+    .bottom-img > span {
+        border-radius: 0;
+    }
+
+    .bottom-img > .img-4,
+    .bottom-img > .img-5 {
+        position: static;
+        width: 140px;
+        height: 140px;
+    }
+
+    .cards-container {
+        height: 38vw;
+    }
+
+    .card {
+        width: 25vw;
+        height: 25vw;
+    }
+
+    .review-card > span {
+        width: 30px;
+        background-size: 20px;
+    }
+
+    .carousel {
+        width: 90%;
+    }
+
+    .review-content {
+        font-size: 19px;
+        text-align: initial;
+    }
+}
+
 @media screen and (max-width: 480px) {
     .spec > .line {
         display: none;
@@ -853,135 +982,4 @@ small > a:hover {
         display: block;
         text-align: center;
     }
-}
-
-@media screen and (max-width: 768px){
-    .loading {
-        width: 10px;
-        height: 10px;
-        margin: 5px;
-    }
-
-    header {
-        padding: 0;
-    }
-
-    .title {
-        font-size: 15px;
-    }
-
-    .text {
-        font-size: 25px;
-    }
-
-    .menu {
-        margin-left: auto;
-        margin: 10px 15px;
-    }
-
-    .menu > span {
-        width: 20px;
-        height: 3px;
-        background-color: black;
-        display: block;
-        margin: 4px;
-        border-radius: 10px;
-    }
-
-    .logo {
-        margin: 10px;
-    }
-
-    .logo > img {
-        width: 130px;
-    }
-
-    .logo::before {
-        width: 20px;
-        height: 20px;
-    }
-
-    nav {
-        height: 100vh;
-        background-color: #ffffff;
-        padding: 10px;
-        display: none;
-    }
-
-    nav > ul > li > a {
-        font-size: 15px;
-    } 
-
-    .nav-item {
-        margin: 2px 0;
-        float: none;
-        width: 50vw;
-    }
-
-    .banner {
-        background-position: 50%;
-    }
-    
-    .banner > .banner-text {
-        width: 100%;
-        height: 100%;
-        backdrop-filter: blur(10px);
-        margin: 0;
-        text-align: center;
-        padding: 0 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .btn {
-        width: 50%;
-    }
-
-    .left-img > .img-3 {
-        display: none;
-    }
-
-    .right-side {
-        justify-content: center;
-    }
-
-    .bottom-img > span {
-        border-radius: 0;
-    }
-
-    .bottom-img > .img-4,
-    .bottom-img > .img-5 {
-        position: static;
-        width: 140px;
-        height: 140px;
-    }
-
-    .cards-container {
-        height: 38vw;
-    }
-
-    .card {
-        width: 25vw;
-        height: 25vw;
-    }
-
-    .review-card > span {
-        width: 30px;
-        background-size: 20px;
-    }
-
-    .carousel {
-        width: 90%;
-    }
-
-    .review-content {
-        font-size: 19px;
-        text-align: initial;
-    }
-}
-
-@media screen and (max-width: 1024px){
-    
 }
