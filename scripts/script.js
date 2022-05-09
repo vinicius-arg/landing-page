@@ -47,21 +47,26 @@ onload = () => {
 function hideNavbar () {
     if (window.innerWidth <= 880) {
         nav.style.display = "none";
-        console.log("navbar <- display: none")
+        console.log("navbar <- display: none");
+    } else {
+        nav.style.display = "block";
+        console.log("navbar <- display: block");
     }
 }
 
 const menu = document.getElementsByClassName("menu")[0];
 const nav = document.getElementsByTagName("nav")[0];
 
-// Para captar mudanças no width;
 hideNavbar();
+// Para captar mudanças de width;
 onresize = hideNavbar;
 
 menu.addEventListener("click", () => {
     if (nav.style.display == "none") {
+        hideNavbar();
         nav.style.display = "block";
     } else {
+        hideNavbar();
         nav.style.display = "none";
     }
 })
