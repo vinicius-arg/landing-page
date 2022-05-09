@@ -47,7 +47,11 @@ onload = () => {
 const menu = document.getElementsByClassName("menu")[0];
 const nav = document.getElementsByTagName("nav")[0];
 
-nav.style.display = "none";
+if (window.innerWidth <= 880) {
+    nav.style.display = "none";
+}
+
+
 
 menu.addEventListener("click", () => {
     if (nav.style.display == "none") {
