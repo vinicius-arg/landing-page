@@ -27,6 +27,10 @@ span {
     display: inline-block;
 }
 
+#checkbox-menu {
+    display: none;
+}
+
 ::-webkit-scrollbar {
     width: 12px;
     background-color: black;
@@ -742,6 +746,8 @@ small > a:hover {
         margin: 10px 15px;
         z-index: 2;
         cursor: pointer;
+        position: relative;
+        transition: 200ms ease-out;
     }
 
     .menu > span {
@@ -751,6 +757,25 @@ small > a:hover {
         display: block;
         margin: 4px;
         border-radius: 10px;
+        top: 50%;
+        left: 50%;
+        transition: 200ms ease-out;
+    }
+
+    #checkbox-menu:checked + .menu {
+        transform: translateX(10px);
+    }
+
+    #checkbox-menu:checked + .menu > span:nth-child(1) {
+        transform: rotate(45deg) translateY(10px);
+    }
+    
+    #checkbox-menu:checked + .menu > span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    #checkbox-menu:checked + .menu > span:nth-child(3) {
+        transform: rotate(-45deg) translateY(-10px);
     }
 
     .logo {
@@ -776,7 +801,7 @@ small > a:hover {
         top: 0;
         right: 0;
         z-index: 1;
-        /* transition: 200ms ease-out; */
+        transition: 200ms ease-out;
         /* transform: translateX(100%); */
     }
     

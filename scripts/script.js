@@ -16,9 +16,9 @@ back.addEventListener("click", function () {
     } else if (xPercent == -200) {
         xPercent+=100;
     }
-    cardSt.style.transform = "translateX(" + n + "%)";
-    cardNd.style.transform = "translateX(" + n + "%)";
-    cardRd.style.transform = "translateX(" + n + "%)";
+    cardSt.style.transform = "translateX(" + xPercent + "%)";
+    cardNd.style.transform = "translateX(" + xPercent + "%)";
+    cardRd.style.transform = "translateX(" + xPercent + "%)";
 });
 
 forward.addEventListener("click", function () {
@@ -46,11 +46,11 @@ onload = () => {
 
 function hideNavbar () {
     if (window.innerWidth <= 880) {
-        nav.style.display = "none";
-        console.log("navbar <- display: none");
+        nav.style.opacity = "0";
+        console.log("navbar <- opacity: 0");
     } else {
-        nav.style.display = "block";
-        console.log("navbar <- display: block");
+        nav.style.opacity = "1";
+        console.log("navbar <- opacity: 1");
     }
 }
 
@@ -62,11 +62,11 @@ hideNavbar();
 onresize = hideNavbar;
 
 menu.addEventListener("click", () => {
-    if (nav.style.display == "none") {
+    if (nav.style.opacity == 0) {
         hideNavbar();
-        nav.style.display = "block";
+        nav.style.opacity = 1;
     } else {
         hideNavbar();
-        nav.style.display = "none";
+        nav.style.opacity = 0;
     }
-})
+});
